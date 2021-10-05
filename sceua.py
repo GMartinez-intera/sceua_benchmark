@@ -283,8 +283,7 @@ def sceua(x0, bl, bu, maxn, kstop, pcento, peps, ngs, iseed, iniflg, ifunct):
         criter.append(bestf)
         if nloop >= kstop:
             criter_change = abs(criter[nloop - 1] - criter[nloop - kstop + 1 - 1]) * 100  # check
-            criter_change = criter_change / np.mean(
-                np.abs(np.array(criter[nloop - kstop + 1 - 1:nloop - 1 + 1])))  # check
+            criter_change = criter_change / np.mean(np.abs(np.array(criter[nloop - kstop + 1 - 1:nloop - 1 + 1])))
             if criter_change < pcento:
                 print('THE BEST POINT HAS IMPROVED IN LAST ' + str(kstop) + ' LOOPS BY \n'
                       + 'LESS THAN THE THRESHOLD ' + str(pcento) + '%')

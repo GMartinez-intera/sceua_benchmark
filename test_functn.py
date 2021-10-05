@@ -2,7 +2,8 @@ import numpy as np
 import pytest
 from sceua import sceua
 
-if __name__ == "__main__":
+
+def test_sceua():
     results = []
     for ifunc in range(1, 8+1):
         print("Enter the function number is " + str(ifunc))
@@ -122,3 +123,8 @@ if __name__ == "__main__":
             print(val)
 
     assert True
+
+
+if __name__ == "__main__":
+    # Run as a standalone instead of using pytest
+    test_sceua()
