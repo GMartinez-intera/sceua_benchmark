@@ -14,7 +14,7 @@ pytest
 ```
 3. Using Github Actions
 
-See [workflow](sceua_benchmark/github/workflows/python-package-conda.yml)
+See [workflow](.github/workflows/python-package-conda.yml)
 
 ## Algorithm
 > Duan, Q., Sorooshian, S., & Gupta, V. K. (1994). Optimal use of the SCE-UA global optimization method for calibrating watershed models. Journal of hydrology, 158(3-4), 265-284.
