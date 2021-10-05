@@ -2,17 +2,18 @@
 Testing benchmark example using the serial version of SCE-UA, pytest, and Github Actions.
 
 Three ways to run this test:
-Using python console or your default IDE
+1. Using python console or your default IDE
 ```
 cd sceua_benchmark
 python test_functn.py
 ```
-Using pytest
+2. Using pytest
 ```
 cd sceua_benchmark
 pytest
 ```
-Using the Github Actions yml workflow
+3. Using Github Actions 
+See /github/workflows/python-package-conda.yml
 
 ## Algorithm
 > Duan, Q., Sorooshian, S., & Gupta, V. K. (1994). Optimal use of the SCE-UA global optimization method for calibrating watershed models. Journal of hydrology, 158(3-4), 265-284.
