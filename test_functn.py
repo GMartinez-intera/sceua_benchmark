@@ -1,5 +1,5 @@
 import numpy as np
-
+import pytest
 from sceua import sceua
 
 if __name__ == "__main__":
@@ -89,6 +89,7 @@ if __name__ == "__main__":
         Speps = 0.00001
         import random
         Siseed = random.randrange(1, 100)
+        #Siseed = 2020
         Siniflg = 0
 
         ngs = len(x0)+5
@@ -101,9 +102,23 @@ if __name__ == "__main__":
                         np.round(np.array(x0), decimals=3),
                         [round(scebestf, 3),  round(f0, 3)]])
 
+        """
+        From pytest documentation:
+        https://docs.pytest.org/en/latest/reference/reference.html?highlight=approx#pytest-approx
+        By default, approx considers numbers within a relative tolerance of 1e-6 (i.e. one part in a million) of its 
+        expected value to be equal. This treatment would lead to surprising results if the expected value was 0.0, 
+        because nothing but 0.0 itself is relatively close to 0.0. To handle this case less surprisingly, 
+        approx also considers numbers within an absolute tolerance of 1e-12 of its expected value to be equal.
+        
+        Absolute difference was set after inspection of results with initial 8 functions.
+        """
+        # Check SCE-UA result is within 0.1 of the global optima
+        assert f0 == pytest.approx(scebestf, abs=0.1)
+
+        # TBD check each parameter value. Tricky because multiple global optima for some functions.
+
     for elem in results:
         for val in elem:
             print(val)
 
     assert True
-    
