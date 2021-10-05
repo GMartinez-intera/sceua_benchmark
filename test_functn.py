@@ -104,3 +104,6 @@ if __name__ == "__main__":
     for elem in results:
         for val in elem:
             print(val)
+
+    assert True
+    
