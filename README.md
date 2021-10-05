@@ -1,5 +1,5 @@
 # sceua_benchmark
-Testing benchmark example using the serial version of SCE-UA, pytest, and Github Actions.
+Testing benchmark example using the serial version of SCE-UA optimization algorithm, pytest, and Github Actions.
 
 Three ways to run this test:
 1. Using python console or your default IDE
